@@ -1,33 +1,51 @@
 🔧 AI Predictive Maintenance System
-🚀 Live Demo
 
-Streamlit App:
-https://predictive-maintenance-system-ai.streamlit.app/
+🚀 Machine Failure Prediction using XGBoost & Streamlit
+
+Live Demo:
+👉 https://predictive-maintenance-system-ai.streamlit.app/
+
 
 📌 Project Overview
 
-Machine failures in industrial environments can lead to production downtime, maintenance costs, and operational losses.
+Machine failures in industrial environments can result in:
 
-This project uses Machine Learning (XGBoost) to predict machine failures based on operational parameters such as temperature, rotational speed, torque, and tool wear, enabling predictive maintenance and proactive decision-making.
+Production Downtime
+Increased Maintenance Costs
+Operational Losses
+Reduced Efficiency
 
-The solution is deployed as an interactive Streamlit dashboard where users can enter machine parameters and instantly receive failure predictions and risk assessments.
+This project uses Machine Learning (XGBoost) to predict machine failures based on machine operating conditions such as temperature, rotational speed, torque, and tool wear.
+
+The solution is deployed as an interactive Streamlit Dashboard that allows users to enter machine parameters and receive real-time failure predictions and risk assessments.
 
 🎯 Problem Statement
 
-Traditional maintenance approaches often rely on scheduled servicing or reactive repairs after failures occur.
+Traditional maintenance strategies are often:
 
-The objective of this project is to:
+Reactive (repair after failure)
+Time-based (scheduled maintenance)
 
-Predict machine failures before they occur
-Reduce unplanned downtime
-Improve maintenance planning
-Increase operational efficiency
-Support predictive maintenance strategies
+These approaches can lead to unnecessary maintenance costs or unexpected breakdowns.
+
+Objective
+
+Build a predictive maintenance system capable of:
+
+✅ Predicting machine failures before they occur
+
+✅ Reducing unplanned downtime
+
+✅ Improving maintenance planning
+
+✅ Increasing operational efficiency
+
+✅ Supporting Industry 4.0 practices
+
 📊 Dataset
+AI4I 2020 Predictive Maintenance Dataset
 
-Dataset: AI4I 2020 Predictive Maintenance Dataset
-
-The dataset contains operational data collected from industrial machines.
+The dataset contains operational sensor data collected from industrial machines.
 
 Features Used
 Feature	Description
@@ -39,32 +57,35 @@ Torque [Nm]	Applied Torque
 Tool Wear [min]	Tool Usage Time
 Machine Failure	Target Variable
 🛠️ Project Workflow
-1. Exploratory Data Analysis (EDA)
-Data understanding
-Distribution analysis
-Outlier detection
-Failure vs Healthy machine analysis
-Correlation analysis
-2. Data Preprocessing
+1️⃣ Exploratory Data Analysis (EDA)
+Distribution Analysis
+Failure vs Healthy Machine Analysis
+Outlier Detection
+Correlation Analysis
+Feature Understanding
+2️⃣ Data Preprocessing
 Removed irrelevant columns
 Label Encoding
 Train-Test Split
 Feature Scaling
-3. Model Building
+3️⃣ Model Building
 
-The following machine learning models were trained and evaluated:
+The following classification models were trained and evaluated:
 
 Logistic Regression
 Decision Tree
 Random Forest
 XGBoost
-4. Hyperparameter Tuning
+4️⃣ Hyperparameter Tuning
 
 Used GridSearchCV to optimize:
 
 max_depth
 learning_rate
 n_estimators
+
+for improved recall and overall performance.
+
 🤖 Final Model
 XGBoost Classifier
 
@@ -72,40 +93,44 @@ XGBoost was selected as the final model because it achieved the best balance bet
 
 Accuracy
 Recall
+Precision
 F1 Score
-False Negative Reduction
+
+while minimizing false negatives.
+
 📈 Model Performance
 Metric	Score
 Accuracy	98.35%
-Recall	62%
 Precision	79%
+Recall	62%
 F1 Score	0.70
-Why Recall Matters
+Why Recall Matters?
 
-For predictive maintenance, missing a machine failure can result in:
+For predictive maintenance:
 
-Unexpected breakdowns
-Production losses
-Higher maintenance costs
+Missing a failure is far more expensive
+than inspecting a healthy machine.
 
-Therefore, Recall was prioritized over Accuracy during model selection.
+Therefore Recall was prioritized during model evaluation and model selection.
 
 🔍 Feature Importance Analysis
 
-Top contributing features identified by XGBoost:
+Top features identified by XGBoost:
 
-Torque [Nm]
-Rotational Speed [rpm]
-Air Temperature [K]
-Tool Wear [min]
-Process Temperature [K]
-Machine Type
-Key Insight
-
-Higher torque, lower rotational speed, and increased tool wear were strongly associated with machine failure risk.
-
-💻 Streamlit Dashboard Features
-Dashboard Capabilities
+Rank	Feature
+1	Torque [Nm]
+2	Rotational Speed [rpm]
+3	Air Temperature [K]
+4	Tool Wear [min]
+5	Process Temperature [K]
+6	Machine Type
+Key Insights
+Higher Torque increases failure risk.
+Lower RPM is associated with machine failures.
+Increased Tool Wear contributes significantly to failures.
+Temperature variations affect machine reliability.
+💻 Streamlit Dashboard
+Features
 
 ✅ Machine Failure Prediction
 
@@ -113,22 +138,18 @@ Dashboard Capabilities
 
 ✅ Risk Assessment
 
-✅ Interactive User Interface
+✅ Interactive Dashboard
 
-✅ Industrial Monitoring Style Dashboard
+✅ Real-Time User Inputs
 
-Input Parameters
-Machine Type
-Air Temperature
-Process Temperature
-Rotational Speed
-Torque
-Tool Wear
-Outputs
-Machine Healthy / Failure Prediction
-Failure Probability
-Risk Level Assessment
-🧰 Technologies Used
+Dashboard Preview
+
+Add a screenshot here after deployment.
+
+Example:
+
+![Dashboard](dashboard.png)
+🧰 Tech Stack
 Programming Language
 Python
 Libraries
@@ -159,23 +180,23 @@ Through this project, I gained hands-on experience in:
 
 Exploratory Data Analysis
 Feature Engineering
-Classification Models
-Model Evaluation
+Machine Learning Classification
 Hyperparameter Tuning
+Model Evaluation
 Feature Importance Analysis
 Streamlit Deployment
-End-to-End Machine Learning Workflow
+End-to-End ML Workflow
+🔮 Future Improvements
+IoT Sensor Integration
+Real-Time Monitoring
+Cloud Database Connectivity
+Maintenance Scheduling Recommendations
+Advanced Anomaly Detection
 👨‍💻 Author
-
 Ojas Savkar
 
 Mechanical Engineering Student | AI/ML & Data Science Enthusiast
 
-GitHub: https://github.com/Ojas4git
+🔗 GitHub: https://github.com/Ojas4git
 
-⭐ Future Improvements
-Real-time sensor integration
-IoT-based monitoring
-Advanced anomaly detection
-Cloud database integration
-Maintenance scheduling recommendations
+🚀 Live App: https://predictive-maintenance-system-ai.streamlit.app/
